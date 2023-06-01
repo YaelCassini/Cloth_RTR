@@ -1,0 +1,2 @@
+// const char* logl_root = "C:/Users/Kyle/Documents/Graphics/Shaders/NonPhotorealisticShaders";
+const char* logl_root = "D:/STUDY/GPU_Rendering/Non-Photorealistic-GLSL-Shaders-master/Non-Photorealistic-GLSL-Shaders-master";
