@@ -16,11 +16,11 @@
 using namespace std;
 
 
-#include "Headers/render_text.h"
-#include "Headers/shader.h"
-#include "Headers/filesystem.h"
-#include "Headers/camera.h"
-#include "Headers/model.h"
+#include "render_text.h"
+#include "shader.h"
+#include "filesystem.h"
+#include "camera.h"
+#include "model.h"
 
 
 // 函数声明
@@ -161,37 +161,37 @@ int main(int argc, char** argv)
 
 	// 读入Shader代码并创建Shader Program
 	// ----------------------------------------------------------------------------
-	Shader phongShader("Shaders/default.vert", "Shaders/PhongLighting.frag");	
-	Shader toonShader("Shaders/default.vert", "Shaders/ToonShading.frag");
-	Shader lightSourceShader("Shaders/LightSource.vert", "Shaders/LightSource.frag");
-	Shader renderTextShader("Shaders/RenderText.vert", "Shaders/RenderText.frag");
-	Shader shadowMapShader("Shaders/Shadowmap.vert", "Shaders/Shadowmap.frag");
-	Shader renderTextureShader("Shaders/RenderTexture.vert", "Shaders/RenderTexture.frag");
-	Shader PBRShader("Shaders/PBRShader.vert", "Shaders/PBRShader.frag");
+	Shader phongShader("shaders/default.vert", "shaders/PhongLighting.frag");	
+	Shader toonShader("shaders/default.vert", "shaders/ToonShading.frag");
+	Shader lightSourceShader("shaders/LightSource.vert", "shaders/LightSource.frag");
+	Shader renderTextShader("shaders/RenderText.vert", "shaders/RenderText.frag");
+	Shader shadowMapShader("shaders/Shadowmap.vert", "shaders/Shadowmap.frag");
+	Shader renderTextureShader("shaders/RenderTexture.vert", "shaders/RenderTexture.frag");
+	Shader PBRShader("shaders/PBRShader.vert", "shaders/PBRShader.frag");
 
 	// 读入模型并分别建立两个人物两个姿势的ModelList
 	// ----------------------------------------------------------------------------
-	Model backgroundModel("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/background.obj");
+	Model backgroundModel("./models/background.obj");
 	
-	Model bodyModel1_1("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/body1_1.obj");
-	Model clothModel1_1("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth1_1.obj");
-	Model clothModel2_1("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth2_1.obj");
-	Model clothModel3_1("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth3_1.obj");
+	Model bodyModel1_1("./models/body1_1.obj");
+	Model clothModel1_1("./models/cloth1_1.obj");
+	Model clothModel2_1("./models/cloth2_1.obj");
+	Model clothModel3_1("./models/cloth3_1.obj");
 
-	Model bodyModel1_2("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/body1_2.obj");
-	Model clothModel1_2("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth1_2.obj");
-	Model clothModel2_2("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth2_2.obj");
-	Model clothModel3_2("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth3_2.obj");
+	Model bodyModel1_2("./models/body1_2.obj");
+	Model clothModel1_2("./models/cloth1_2.obj");
+	Model clothModel2_2("./models/cloth2_2.obj");
+	Model clothModel3_2("./models/cloth3_2.obj");
 
-	Model bodyModel2_1("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/body2_1.obj");
-	Model clothModel4_1("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth4_1.obj");
-	Model clothModel5_1("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth5_1.obj");
-	Model clothModel6_1("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth6_1.obj");
+	Model bodyModel2_1("./models/body2_1.obj");
+	Model clothModel4_1("./models/cloth4_1.obj");
+	Model clothModel5_1("./models/cloth5_1.obj");
+	Model clothModel6_1("./models/cloth6_1.obj");
 
-	Model bodyModel2_2("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/body2_2.obj");
-	Model clothModel4_2("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth4_2.obj");
-	Model clothModel5_2("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth5_2.obj");
-	Model clothModel6_2("D:/STUDY/GPU_Rendering/Cloth/Non-Photorealistic-GLSL-Shaders-master/Models/cloth6_2.obj");
+	Model bodyModel2_2("./models/body2_2.obj");
+	Model clothModel4_2("./models/cloth4_2.obj");
+	Model clothModel5_2("./models/cloth5_2.obj");
+	Model clothModel6_2("./models/cloth6_2.obj");
 
 	vector<Model*> modelsList01, modelsList02;
 	vector<Model*> modelsList11, modelsList12;

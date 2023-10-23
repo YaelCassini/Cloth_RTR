@@ -11,9 +11,9 @@
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
 
-#include "Headers/stb_image.h"
-#include "Headers/mesh.h"
-#include "Headers/shader.h"
+#include "stb_image.h"
+#include "mesh.h"
+#include "shader.h"
 
 #include <string>
 #include <fstream>

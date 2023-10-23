@@ -16,8 +16,8 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
-#include "Headers/shader.h"
-#include "Headers/filesystem.h"
+#include "shader.h"
+#include "filesystem.h"
 
 
 /// Holds all state information relevant to a character as loaded using FreeType
